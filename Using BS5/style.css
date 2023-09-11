@@ -40,9 +40,6 @@ body::-webkit-scrollbar-thumb {
     --bgcolor: #710ec9;
     --overlay: #3c3e4173;
     --black: #111111;
-    /* --shadow-white-3: 5px 5px 15px #8800ff, -5px -5px 15px #8207ee;
-    --inner-shadow: 1px 4px 2px -3px rgba(207, 198, 198, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
-    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff); */
 }
 
 
@@ -82,21 +79,6 @@ body::-webkit-scrollbar-thumb {
   transform-origin: left;
   transform: scaleX(1);
 }
-
-/* .font_nav::after {
-    content: "";
-    display: block;
-    margin: auto;
-    width: 10%;
-    border-bottom: 2px solid var(--color);
-    height: 2px;
-    background: var(--color);
-    transition: linear .3s;
-}
-
-.font_nav:hover::after {
-    width: 100%;
-} */
 
 .nav_bg {
     background-color: var(--transparent);
@@ -340,28 +322,13 @@ body::-webkit-scrollbar-thumb {
     transition: linear .3s;
     padding: 12% 10%;
     box-shadow: 0 0 5px var(--color);
-    /* color: var(--white);
-    background: var(--color3); */
     position: relative;
     border-radius: 10px;
 }
-
 .animate_box:hover {
     color: var(--white);
     background: var(--color);
 }
-
-/* .animate_box .bars {
-    font-size: 2.5rem;
-    transition: linear .5s;
-    transform: rotate(-45deg);
-}
-
-.animate_box:hover .bars{
-    transform: rotate(325deg);
-    translate: 0 -.5rem;
-} */
-
 .animate_box .bars {
     font-size: 2.5rem;
     transition: ease-in .5s;
@@ -411,7 +378,6 @@ body::-webkit-scrollbar-thumb {
 
 .portfolio_section {
   transition: linear .4s;
-  /* cursor: pointer; */
   padding: 18% 10% 32% 10%;
   box-shadow: 0 0 5px var(--color);
   position: relative;
@@ -717,27 +683,15 @@ textarea {
 	width: 100%;
 	border: 0;
 	padding: 10px 5px;
-  background: white no-repeat;
-	
-	/*
-	* IMPORTANT PART HERE
-	*/
-	
-  /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+  	background: white no-repeat;	
 	background-image: linear-gradient(to bottom, var(--color), var(--color)), linear-gradient(to bottom, silver, silver);
-	/* sizes for the 2 images (default state) */
 	background-size: 0 2px, 100% 1px;
-	/* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
 	background-position: 50% 100%, 50% 100%;
-
-	/* animation solely on background-size */
-  transition: background-size 0.6s cubic-bezier(0.64, 0.09, 0.08, 1);
-
-}
+  	transition: background-size 0.6s cubic-bezier(0.64, 0.09, 0.08, 1);
+ }
 
 input:focus,
 textarea:focus{
-  /* sizes for the 2 images (focus state) */
 	background-size: 100% 2px, 100% 1px;
 	outline: none;
 }
@@ -869,7 +823,6 @@ textarea:focus{
 }
 
 .book-loader-container1 {
-  /* --color: #eee; */
   --line-width: 0.5ch;
   --_border-width: calc(var(--line-width) / 2);
   --duration: 2s;
@@ -889,7 +842,6 @@ textarea:focus{
   --_height: calc(
     var(--_wrapper-width) + var(--spine-height) + var(--page-offset-y)
   );
-  /*   --border-radius: 15px; */
 
   position: relative;
   width: var(--_width);
@@ -988,13 +940,9 @@ textarea:focus{
   margin: 15ch;
 }
 
-
-
-
 .page::after,
 .page::before {
   box-sizing: border-box;
-  /*   outline: solid rgb(0 0 255 / 0.5) 2px; */
 }
 
 @keyframes rotation {
