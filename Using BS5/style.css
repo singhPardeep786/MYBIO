@@ -40,9 +40,6 @@ body::-webkit-scrollbar-thumb {
     --bgcolor: #710ec9;
     --overlay: #3c3e4173;
     --black: #111111;
-    /* --shadow-white-3: 5px 5px 15px #8800ff, -5px -5px 15px #8207ee;
-    --inner-shadow: 1px 4px 2px -3px rgba(207, 198, 198, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
-    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff); */
 }
 
 
@@ -82,21 +79,6 @@ body::-webkit-scrollbar-thumb {
   transform-origin: left;
   transform: scaleX(1);
 }
-
-/* .font_nav::after {
-    content: "";
-    display: block;
-    margin: auto;
-    width: 10%;
-    border-bottom: 2px solid var(--color);
-    height: 2px;
-    background: var(--color);
-    transition: linear .3s;
-}
-
-.font_nav:hover::after {
-    width: 100%;
-} */
 
 .nav_bg {
     background-color: var(--transparent);
@@ -342,62 +324,6 @@ body::-webkit-scrollbar-thumb {
 
 /* ---------------FEATURES----START------------ */
 
-
-/* .animate_box {
-    cursor: pointer;
-    transition: linear .3s;
-    padding: 12% 10%;
-    box-shadow: 0 0 5px var(--color);
-    position: relative;
-    border-radius: 10px;
-}
-
-.animate_box:hover {
-    color: var(--white);
-    background: var(--color);
-}
-
-.animate_box .bars {
-    font-size: 2.5rem;
-    transition: ease-in .5s;
-}
-
-.animate_box:hover .bars {
-    transform: rotate(360deg);
-    translate: 0 -.5rem;
-}
-
-.animate_box h3 {
-    transition: ease-in .3s;
-    font-size: 1.8rem;
-}
-
-.animate_box:hover h3 {
-    translate: 0 -.5rem;
-}
-
-.animate_box p {
-    transition: ease-in .3s;
-    font-size: 1.1rem;
-}
-
-.animate_box:hover p {
-    translate: 0 -.5rem;
-}
-
-.animate_box .right_arrow {
-    transition: ease-in .4s;
-    font-size: 2rem;
-    visibility: hidden;
-    position: absolute;
-    bottom: 0;
-}
-
-.animate_box:hover .right_arrow {
-    visibility: visible;
-    translate: 0 -.5rem;
-   bottom: 5%;
-} */
 
 .tilt_box {
   transform-style: preserve-3d;
@@ -759,8 +685,6 @@ body::-webkit-scrollbar-thumb {
 .html_skill:hover span {
     transform: translateZ(30deg);
     color: var(--white);
-    /* -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; */
 }
 
 
