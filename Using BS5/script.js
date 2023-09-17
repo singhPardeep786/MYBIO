@@ -15,42 +15,6 @@ function playAnim() {
   setTimeout(
     function () {
       typingElement.innerText = typeArray[typeIndex].slice(0, index);
-      /*
-        This line handles both typing and removing text
-        typeArray[typeIndex] selects the text from array
-        slice(0, index) selects the part of that text
-
-        Examples:
-
-        typeIndex = 0     => First Text
-        index = 0         => First Letter of the Text
-        Result is "H"
-
-        typeIndex = 0
-        index = 1
-        Result is "HT"    => First 2 Letters of the Text
-
-        typeIndex = 0
-        index = 2
-        Result is "HTM"   => First 3 Letters of the Text
-
-        typeIndex = 0
-        index = 3
-        Result is "HTML"  =>  Text typed completely, start to remove by decreasing index
-                              While removing, index will be: 2,1,0 . After 0, move on to next text. 
-
-        typeIndex = 1     => Second Text                   
-        index = 0
-        Result is "C"
-
-        typeIndex = 1
-        index = 1
-        Result is "CS"
-
-        typeIndex = 1
-        index = 2
-        Result is "CSS"
-      */
 
       // If typing
       if (isAdding) {
@@ -84,11 +48,6 @@ function playAnim() {
       playAnim();
     },
 
-    /* 
-      If typing text, call it every 120ms
-      If removing text, call it every 60ms
-      Type slower, remove faster
-    */
     isAdding ? 80 : 20
   );
 }
