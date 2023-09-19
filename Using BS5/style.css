@@ -354,6 +354,7 @@ body::-webkit-scrollbar-thumb {
 
 .tilt_box {
   transform-style: preserve-3d;
+  perspective: 1000px;
   cursor: pointer;
   transition: linear .3s;
   padding: 12% 10%;
