@@ -30,16 +30,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root {
-    --color: #8800ff;
+   --color: #8800ff;
     --color2: #0c0413;
-    --color3: -webkit-linear-gradient( #c837ae , #733bc6, #3043dc);
+    /* --color3: -webkit-linear-gradient( #c837ae , #733bc6, #3043dc); */
+    --color3: -webkit-linear-gradient( #8800ff, #c837ae);
+    --facebook: #0a82ed;
+    --linked: #0a66c2;
     --newcolor: #3a0ca3;
     --white: #fff;
     --helper: #3c3e41;
     --transparent: #f8f7f7ec;
     --bgcolor: #710ec9;
     --overlay: #3c3e4173;
-    --black: #111111;
+    --black: #766b6b;
 }
 
 
@@ -137,58 +140,81 @@ body::-webkit-scrollbar-thumb {
   }
 
   .facebook_icon {
-    color: var(--color);
+    color: var(--facebook);
     font-size: 1.7rem;
-    padding: .9rem .8rem;
-    box-shadow: 0px 0px 4px 1px var(--color);
+    padding: .9rem .9rem;
+    box-shadow: 0px 2px 10px var(--black);
+    border-radius: .5rem;
     transition: all ease-in-out .4s;
   }
 
   .facebook_icon:hover {
     translate: 0 -.3rem;
-    color: var(--white);
-    background: var(--color3);
-    box-shadow: none;
-    scale: 1.1;
+    /* color: var(--white);
+    background: var(--color3); */
+    /* box-shadow: none; */
+    /* scale: 1.1; */
   }
 
   .insta_icon {
-    color: var(--color);
-    padding: 1rem 1rem;
+    /* color: var(--color); */
+    padding: 1rem 1.1rem;
     font-size: 1.5rem;
-    box-shadow: 0px 0px 4px 1px var(--color);
+    border-radius: .5rem;
+    box-shadow: 0px 2px 10px 0px var(--black);
     transition: all ease-in-out .4s;
   }
 
    .insta_icon:hover {
     translate: 0 -.3rem;
     color: var(--white);
-    background: var(--color3);
-    box-shadow: none;
-    scale: 1.1;
+    /* background: var(--color3); */
+    /* box-shadow: none; */
+    /* scale: 1.1; */
   }
 
   .linkedin_icon {
-    color: var(--color);
-    font-size: 1.5rem;
-    padding: 1rem 1.1rem;
-    box-shadow: 0px 0px 4px 1px var(--color);
+    color: var(--linked);
+    font-size: 1.7rem;
+    padding: .9rem 1rem;
+    /* box-shadow: 0px 0px 4px var(--color); */
+    border-radius: .5rem;
+    box-shadow: 0px 2px 10px 0px var(--black);
     transition: all ease-in-out .4s;
   }
 
   .linkedin_icon:hover {
     translate: 0 -.3rem;
-    color: var(--white);
-    background: var(--color3);
-    box-shadow: none;
-    scale: 1.1;
+    /* color: var(--white); */
+    /* background: var(--color3); */
+    /* box-shadow: none; */
+    /* scale: 1.1; */
+  }
+
+  .github_icon {
+    color: var(--linked);
+    font-size: 1.5rem;
+    padding: 1rem 1.1rem;
+    /* box-shadow: 0px 0px 4px var(--color); */
+    border-radius: .5rem;
+    box-shadow: 0px 2px 10px 0px var(--black);
+    transition: all ease-in-out .4s;
+  }
+
+  .github_icon:hover {
+    translate: 0 -.3rem;
+    /* color: var(--white); */
+    /* background: var(--color3); */
+    /* box-shadow: none; */
+    /* scale: 1.1; */
   }
 
   .photoshop_icon {
     color: var(--color);
     font-size: 1.5rem;
     padding: 1rem 1.1rem;
-    box-shadow: 0px 0px 4px 1px var(--color);
+    border-radius: .5rem;
+    box-shadow: 0px 2px 10px 0px var(--black);
     transition: all ease-in-out .4s;
     transform-style: preserve-3d;
   }
@@ -201,7 +227,8 @@ body::-webkit-scrollbar-thumb {
     color: var(--color);
     font-size: 1.5rem;
     padding: 1rem 1.3rem;
-    box-shadow: 0px 0px 4px 1px var(--color);
+    border-radius: .5rem;
+    box-shadow: 0px 2px 10px 0px var(--black);
     transition: all ease-in-out .4s;
     transform-style: preserve-3d;
   }
