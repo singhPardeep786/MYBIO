@@ -15,6 +15,42 @@ function playAnim() {
   setTimeout(
     function () {
       typingElement.innerText = typeArray[typeIndex].slice(0, index);
+      /*
+        This line handles both typing and removing text
+        typeArray[typeIndex] selects the text from array
+        slice(0, index) selects the part of that text
+
+        Examples:
+
+        typeIndex = 0     => First Text
+        index = 0         => First Letter of the Text
+        Result is "H"
+
+        typeIndex = 0
+        index = 1
+        Result is "HT"    => First 2 Letters of the Text
+
+        typeIndex = 0
+        index = 2
+        Result is "HTM"   => First 3 Letters of the Text
+
+        typeIndex = 0
+        index = 3
+        Result is "HTML"  =>  Text typed completely, start to remove by decreasing index
+                              While removing, index will be: 2,1,0 . After 0, move on to next text. 
+
+        typeIndex = 1     => Second Text                   
+        index = 0
+        Result is "C"
+
+        typeIndex = 1
+        index = 1
+        Result is "CS"
+
+        typeIndex = 1
+        index = 2
+        Result is "CSS"
+      */
 
       // If typing
       if (isAdding) {
@@ -48,6 +84,11 @@ function playAnim() {
       playAnim();
     },
 
+    /* 
+      If typing text, call it every 120ms
+      If removing text, call it every 60ms
+      Type slower, remove faster
+    */
     isAdding ? 80 : 20
   );
 }
@@ -122,6 +163,68 @@ tl.from(".nav_animation", {
   stagger: 0.2,
   delay: 1.5,
 })
+
+let mouseCursor = document.querySelector('.cursor');
+let links = document.querySelectorAll(' button, input[type=submit], .html_skill');
+let hovers = document.querySelectorAll('a, .photoshop_icon, .figma_icon');
+let tilts = document.querySelectorAll('.tilt_box');
+
+window.addEventListener('mousemove',cursor);
+
+function cursor(e){
+  gsap.to(mouseCursor, 0.4, {
+      x: e.clientX,
+      y: e.clientY
+  });  
+}
+
+links.forEach(link => { 
+  link.addEventListener( "mouseleave", () => {
+    mouseCursor.classList.remove( "link-grow" );
+      gsap.to(mouseCursor, 0.4, {
+      scale: 1,     
+    }); 
+});
+  
+  link.addEventListener( "mouseover" , () => {
+    mouseCursor.classList.add( "link-grow" );
+    gsap.to(mouseCursor, 0.4, {
+      scale: 2,  
+    }); 
+  });
+});
+
+hovers.forEach(hover => { 
+  hover.addEventListener( "mouseleave", () => {
+    mouseCursor.classList.remove( "hover-grow" );
+      gsap.to(mouseCursor, 0.4, {
+      scale: 1,    
+    }); 
+});
+  
+  hover.addEventListener( "mouseover" , () => {
+    mouseCursor.classList.add( "hover-grow" );
+    gsap.to(mouseCursor, 0.4, {
+      scale: .8,
+    }); 
+  });
+});
+
+tilts.forEach(tilt => { 
+  tilt.addEventListener( "mouseleave", () => {
+    mouseCursor.classList.remove( "tilt-grow" );
+      gsap.to(mouseCursor, 0.4, {
+      scale: 1,    
+    }); 
+});
+  
+  tilt.addEventListener( "mouseover" , () => {
+    mouseCursor.classList.add( "tilt-grow" );
+    gsap.to(mouseCursor, 0.4, {
+      scale: 1.5,
+    }); 
+  });
+});
 
 //----------GSAP---CODES--END-----------//
 
